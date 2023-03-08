@@ -1,15 +1,16 @@
 package com.kfedor.integreation.entity;
 
-import com.kfedor.entity.Film;
-import com.kfedor.util.Genre;
+
+import com.kfedor.entity.Participant;
 import com.kfedor.util.HibernateTestUtil;
+import com.kfedor.util.Role;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FilmIT {
+class ParticipantIT {
 
     @Test
     void shouldDeleteEntity() {
@@ -18,14 +19,14 @@ public class FilmIT {
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            Film film = getFilm();
-            session.persist(film);
+            Participant participant = getParticipant();
+            session.persist(participant);
             session.flush();
-            session.remove(film);
+            session.remove(participant);
 
             session.getTransaction().commit();
 
-            Film actualResult = session.get(Film.class, film.getId());
+            Participant actualResult = session.get(Participant.class, participant.getId());
 
             assertThat(actualResult).isNull();
 
@@ -39,18 +40,18 @@ public class FilmIT {
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            Film film = getFilm();
-            session.persist(film);
+            Participant participant = getParticipant();
+            session.persist(participant);
 
-            Film initialFilm = session.get(Film.class, film.getId());
-            initialFilm.setTitle("changedTitle");
-            session.persist(initialFilm);
+            Participant initialParticipant = session.get(Participant.class, participant.getId());
+            initialParticipant.setFirstName("changedName");
+            session.persist(initialParticipant);
 
             session.getTransaction().commit();
 
-            Film actualResult = session.get(Film.class, initialFilm.getId());
+            Participant actualResult = session.get(Participant.class, initialParticipant.getId());
 
-            assertThat(actualResult.getTitle()).isEqualTo("changedTitle");
+            assertThat(actualResult.getFirstName()).isEqualTo("changedName");
         }
 
     }
@@ -62,24 +63,22 @@ public class FilmIT {
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            Film film = getFilm();
-            session.persist(film);
+            Participant participant = getParticipant();
+            session.persist(participant);
             session.getTransaction().commit();
 
-            Film actualResult = session.get(Film.class, film.getId());
+            Participant actualResult = session.get(Participant.class, participant.getId());
 
-            assertThat(actualResult.getId()).isEqualTo(film.getId());
+            assertThat(actualResult.getId()).isEqualTo(participant.getId());
         }
 
     }
 
-    private Film getFilm() {
-        return Film.builder()
-                .title("TestFilm")
-                .productionCompany("TestCompany")
-                .releaseYear(2020)
-                .genre(Genre.ACTION)
-                .productionCountry("TestCountry")
+    private Participant getParticipant() {
+        return Participant.builder()
+                .firstName("Leo")
+                .lastName("DiCaprio")
+                .role(Role.ACTOR)
                 .build();
     }
 

@@ -1,12 +1,159 @@
-b[23:01:17,244] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.1.7.Final
-é[23:01:19,485] WARN [org.hibernate.orm.connections.pooling: 80] HHH10001002: Using built-in connection pool (not intended for production use)
-~[23:01:19,498] INFO [org.hibernate.orm.connections.pooling: 139] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
-ò[23:01:19,499] INFO [org.hibernate.orm.connections.pooling: 161] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/video_library]
-Ñ[23:01:19,502] INFO [org.hibernate.orm.connections.pooling: 170] HHH10001001: Connection properties: {password=****, user=postgres}
-e[23:01:19,503] INFO [org.hibernate.orm.connections.pooling: 174] HHH10001003: Autocommit mode: false
-o[23:01:19,512] INFO [org.hibernate.orm.connections.pooling: 366] HHH10001115: Connection pool size: 20 (min=1)
-h[23:01:20,239] INFO [SQL dialect: 66] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-⁄[23:01:22,883] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 51] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Ô[23:08:06,238] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+’[23:08:06,344] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+¶[23:08:08,256] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+f[23:08:08,259] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+X[23:08:08,325] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 20.10.22
+  API Version: 1.41
+#  Operating System: Docker Desktop
+  Total Memory: 1985 MB
+t[23:08:08,409] INFO [üê≥ [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+∏[23:08:09,523] INFO [org.testcontainers.utility.RegistryAuthLocator: 263] Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+Æ[23:08:09,883] INFO [üê≥ [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: b46a78c3a8794620b3b91d318ed48621b5187c3fd0933e873b8dc3b0405db5ac
+w[23:08:10,746] INFO [üê≥ [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT2.387203S
+ò[23:08:10,764] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+Y[23:08:10,765] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+x[23:08:10,767] INFO [org.testcontainers.DockerClientFactory: 256] ‚úîÔ∏é Docker server version should be at least 1.6.0
+X[23:08:10,768] INFO [üê≥ [postgres:15]: 376] Creating container for image: postgres:15
+í[23:08:10,910] INFO [üê≥ [postgres:15]: 440] Container postgres:15 is starting: e10d88bd786ba4d5b07b9891618083f96af899b9106ce81d346714a8de6ed420
+[[23:08:13,646] INFO [üê≥ [postgres:15]: 520] Container postgres:15 started in PT2.878354S
+b[23:08:13,847] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.1.7.Final
+é[23:08:15,692] WARN [org.hibernate.orm.connections.pooling: 80] HHH10001002: Using built-in connection pool (not intended for production use)
+~[23:08:15,706] INFO [org.hibernate.orm.connections.pooling: 139] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+†[23:08:15,707] INFO [org.hibernate.orm.connections.pooling: 161] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]
+Ä[23:08:15,709] INFO [org.hibernate.orm.connections.pooling: 170] HHH10001001: Connection properties: {password=****, user=test}
+e[23:08:15,710] INFO [org.hibernate.orm.connections.pooling: 174] HHH10001003: Autocommit mode: false
+o[23:08:15,713] INFO [org.hibernate.orm.connections.pooling: 366] HHH10001115: Connection pool size: 20 (min=1)
+h[23:08:16,346] INFO [SQL dialect: 66] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK9v71p4bh546mdspt5bevl2a27
+ê[23:08:18,684] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6a902015] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+q[23:08:18,694] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+Å[23:08:18,695] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] relation "film_participant" does not exist, skipping
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK6b0cbu6f5ovet6vp2npqpw418
+q[23:08:18,700] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+Å[23:08:18,701] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] relation "film_participant" does not exist, skipping
+Hibernate: 
+    
+9    drop table if exists public.film_participant cascade
+q[23:08:18,707] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+~[23:08:18,708] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] table "film_participant" does not exist, skipping
+Hibernate: 
+    
+.    drop table if exists public.users cascade
+q[23:08:18,712] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+s[23:08:18,714] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] table "users" does not exist, skipping
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FKfh82omoh84cm0qaft772yk3ou
+q[23:08:18,719] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+x[23:08:18,720] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] relation "comment" does not exist, skipping
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FK2h35r34f8x4p7fwm4765jan8h
+q[23:08:18,729] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+x[23:08:18,730] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] relation "comment" does not exist, skipping
+Hibernate: 
+    
+)    drop table if exists Comment cascade
+q[23:08:18,740] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+u[23:08:18,741] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] table "comment" does not exist, skipping
+Hibernate: 
+    
+&    drop table if exists Film cascade
+q[23:08:18,746] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+r[23:08:18,747] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] table "film" does not exist, skipping
+Hibernate: 
+    
+-    drop table if exists Participant cascade
+q[23:08:18,754] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+y[23:08:18,755] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] table "participant" does not exist, skipping
+Hibernate: 
+    
++    create table public.film_participant (
+       id bigserial not null,
+9        invited_at timestamp(6) with time zone not null,
+!        film_id bigint not null,
+(        participant_id bigint not null,
+        primary key (id)
+    )
+ê[23:08:18,769] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7bdb4f17] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: 
+    
+     create table public.users (
+       id bigserial not null,
+%        email varchar(255) not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+(        password varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+(    alter table if exists public.users 
+B       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    
+    create table Comment (
+       id bigserial not null,
+        rating float(53),
+        text varchar(255),
+!        film_id bigint not null,
+"        users_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Film (
+       id bigserial not null,
+%        genre varchar(255) not null,
+)        production_company varchar(255),
+2        production_country varchar(255) not null,
+'        release_year integer not null,
+%        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Participant (
+       id bigserial not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+$        role varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK9v71p4bh546mdspt5bevl2a27 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK6b0cbu6f5ovet6vp2npqpw418 
+%       foreign key (participant_id) 
+       references Participant
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FKfh82omoh84cm0qaft772yk3ou 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FK2h35r34f8x4p7fwm4765jan8h 
+       foreign key (users_id) 
+       references public.users
+⁄[23:08:18,911] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 51] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 Hibernate: 
     insert 
 	    into
@@ -14,4 +161,348 @@
 N        (genre, production_company, production_country, release_year, title) 
     values
         (?, ?, ?, ?, ?)
-õ[23:01:23,428] INFO [org.hibernate.orm.connections.pooling: 608] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/video_library]
+Hibernate: 
+    insert 
+	    into
+        Participant
+'        (first_name, last_name, role) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+	    into
+         public.film_participant
+/        (film_id, invited_at, participant_id) 
+    values
+        (?, ?, ?)
+£[23:08:19,428] INFO [org.hibernate.orm.connections.pooling: 608] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]
+é[23:08:19,574] WARN [org.hibernate.orm.connections.pooling: 80] HHH10001002: Using built-in connection pool (not intended for production use)
+~[23:08:19,576] INFO [org.hibernate.orm.connections.pooling: 139] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+†[23:08:19,579] INFO [org.hibernate.orm.connections.pooling: 161] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]
+Ä[23:08:19,581] INFO [org.hibernate.orm.connections.pooling: 170] HHH10001001: Connection properties: {password=****, user=test}
+e[23:08:19,587] INFO [org.hibernate.orm.connections.pooling: 174] HHH10001003: Autocommit mode: false
+o[23:08:19,589] INFO [org.hibernate.orm.connections.pooling: 366] HHH10001115: Connection pool size: 20 (min=1)
+h[23:08:19,772] INFO [SQL dialect: 66] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK9v71p4bh546mdspt5bevl2a27
+ê[23:08:20,021] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53918b5e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK6b0cbu6f5ovet6vp2npqpw418
+Hibernate: 
+    
+9    drop table if exists public.film_participant cascade
+Hibernate: 
+    
+.    drop table if exists public.users cascade
+q[23:08:20,051] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+ï[23:08:20,052] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] drop cascades to constraint fk2h35r34f8x4p7fwm4765jan8h on table comment
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FKfh82omoh84cm0qaft772yk3ou
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FK2h35r34f8x4p7fwm4765jan8h
+q[23:08:20,067] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+§[23:08:20,067] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] constraint "fk2h35r34f8x4p7fwm4765jan8h" of relation "comment" does not exist, skipping
+Hibernate: 
+    
+)    drop table if exists Comment cascade
+Hibernate: 
+    
+&    drop table if exists Film cascade
+Hibernate: 
+    
+-    drop table if exists Participant cascade
+Hibernate: 
+    
++    create table public.film_participant (
+       id bigserial not null,
+9        invited_at timestamp(6) with time zone not null,
+!        film_id bigint not null,
+(        participant_id bigint not null,
+        primary key (id)
+    )
+ê[23:08:20,088] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5366575d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: 
+    
+     create table public.users (
+       id bigserial not null,
+%        email varchar(255) not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+(        password varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+(    alter table if exists public.users 
+B       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    
+    create table Comment (
+       id bigserial not null,
+        rating float(53),
+        text varchar(255),
+!        film_id bigint not null,
+"        users_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Film (
+       id bigserial not null,
+%        genre varchar(255) not null,
+)        production_company varchar(255),
+2        production_country varchar(255) not null,
+'        release_year integer not null,
+%        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Participant (
+       id bigserial not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+$        role varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK9v71p4bh546mdspt5bevl2a27 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK6b0cbu6f5ovet6vp2npqpw418 
+%       foreign key (participant_id) 
+       references Participant
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FKfh82omoh84cm0qaft772yk3ou 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FK2h35r34f8x4p7fwm4765jan8h 
+       foreign key (users_id) 
+       references public.users
+⁄[23:08:20,214] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 51] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: 
+    insert 
+	    into
+        Film
+N        (genre, production_company, production_country, release_year, title) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+	    into
+        Participant
+'        (first_name, last_name, role) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+	    into
+         public.film_participant
+/        (film_id, invited_at, participant_id) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    update
+!        public.film_participant 
+    set
+        film_id=?,
+        invited_at=?,
+        participant_id=? 
+
+    where
+        id=?
+£[23:08:20,260] INFO [org.hibernate.orm.connections.pooling: 608] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]
+é[23:08:20,399] WARN [org.hibernate.orm.connections.pooling: 80] HHH10001002: Using built-in connection pool (not intended for production use)
+~[23:08:20,400] INFO [org.hibernate.orm.connections.pooling: 139] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+†[23:08:20,401] INFO [org.hibernate.orm.connections.pooling: 161] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]
+Ä[23:08:20,402] INFO [org.hibernate.orm.connections.pooling: 170] HHH10001001: Connection properties: {password=****, user=test}
+e[23:08:20,404] INFO [org.hibernate.orm.connections.pooling: 174] HHH10001003: Autocommit mode: false
+o[23:08:20,409] INFO [org.hibernate.orm.connections.pooling: 366] HHH10001115: Connection pool size: 20 (min=1)
+h[23:08:20,498] INFO [SQL dialect: 66] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK9v71p4bh546mdspt5bevl2a27
+è[23:08:20,689] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d677be9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+=       drop constraint if exists FK6b0cbu6f5ovet6vp2npqpw418
+Hibernate: 
+    
+9    drop table if exists public.film_participant cascade
+Hibernate: 
+    
+.    drop table if exists public.users cascade
+q[23:08:20,726] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+ï[23:08:20,727] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] drop cascades to constraint fk2h35r34f8x4p7fwm4765jan8h on table comment
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FKfh82omoh84cm0qaft772yk3ou
+Hibernate: 
+    
+#    alter table if exists Comment 
+=       drop constraint if exists FK2h35r34f8x4p7fwm4765jan8h
+q[23:08:20,736] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 226] SQL Warning Code: 0, SQLState: 00000
+§[23:08:20,737] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 227] constraint "fk2h35r34f8x4p7fwm4765jan8h" of relation "comment" does not exist, skipping
+Hibernate: 
+    
+)    drop table if exists Comment cascade
+Hibernate: 
+    
+&    drop table if exists Film cascade
+Hibernate: 
+    
+-    drop table if exists Participant cascade
+Hibernate: 
+    
++    create table public.film_participant (
+       id bigserial not null,
+9        invited_at timestamp(6) with time zone not null,
+!        film_id bigint not null,
+(        participant_id bigint not null,
+        primary key (id)
+    )
+è[23:08:20,756] INFO [org.hibernate.orm.connections.access: 45] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@fefb66c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: 
+    
+     create table public.users (
+       id bigserial not null,
+%        email varchar(255) not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+(        password varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+(    alter table if exists public.users 
+B       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    
+    create table Comment (
+       id bigserial not null,
+        rating float(53),
+        text varchar(255),
+!        film_id bigint not null,
+"        users_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Film (
+       id bigserial not null,
+%        genre varchar(255) not null,
+)        production_company varchar(255),
+2        production_country varchar(255) not null,
+'        release_year integer not null,
+%        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table Participant (
+       id bigserial not null,
+*        first_name varchar(255) not null,
+)        last_name varchar(255) not null,
+$        role varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK9v71p4bh546mdspt5bevl2a27 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+3    alter table if exists public.film_participant 
+3       add constraint FK6b0cbu6f5ovet6vp2npqpw418 
+%       foreign key (participant_id) 
+       references Participant
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FKfh82omoh84cm0qaft772yk3ou 
+       foreign key (film_id) 
+       references Film
+Hibernate: 
+    
+#    alter table if exists Comment 
+3       add constraint FK2h35r34f8x4p7fwm4765jan8h 
+       foreign key (users_id) 
+       references public.users
+⁄[23:08:20,849] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 51] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: 
+    insert 
+	    into
+        Film
+N        (genre, production_company, production_country, release_year, title) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+	    into
+        Participant
+'        (first_name, last_name, role) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    insert 
+	    into
+         public.film_participant
+/        (film_id, invited_at, participant_id) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    delete 
+	    from
+!        public.film_participant 
+
+    where
+        id=?
+Hibernate: 
+    select
+        f1_0.id,
+        f2_0.id,
+        f2_0.genre,
+!        f2_0.production_company,
+!        f2_0.production_country,
+        f2_0.release_year,
+        f2_0.title,
+        f1_0.invited_at,
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name,
+        p1_0.role 
+	    from
+&        public.film_participant f1_0 
+	    join
+        Film f2_0 
+%            on f2_0.id=f1_0.film_id 
+	    join
+        Participant p1_0 
+,            on p1_0.id=f1_0.participant_id 
+
+    where
+        f1_0.id=?
+£[23:08:20,968] INFO [org.hibernate.orm.connections.pooling: 608] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:54738/test?loggerLevel=OFF]

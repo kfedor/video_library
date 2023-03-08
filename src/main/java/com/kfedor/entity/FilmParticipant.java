@@ -1,22 +1,22 @@
 package com.kfedor.entity;
 
-import com.kfedor.util.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
+
+
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "film_participant", schema = "public")
@@ -25,11 +25,25 @@ public class FilmParticipant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Enumerated(EnumType.STRING)
-    private Role role;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "film_id")
+    private Film film;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "participant_id")
+    private Participant participant;
+
+    @Column(name = "invited_at", nullable = false)
+    private Instant invitedAt;
+
+    public FilmParticipant(Long id, Film film, Participant participant, Instant invitedAt) {
+        this.id = id;
+        this.film = film;
+        this.film.getFilmParticipants().add(this);
+        this.participant = participant;
+        this.participant.getFilmParticipants().add(this);
+        this.invitedAt = invitedAt;
+    }
 
 }

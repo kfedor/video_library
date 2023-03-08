@@ -21,11 +21,11 @@ CREATE TABLE IF NOT EXISTS film
     production_country VARCHAR(128) NOT NULL
 );
 
-INSERT INTO film (title, production_company,release_year, genre, production_country)
+INSERT INTO film (title, production_company, release_year, genre, production_country)
 VALUES ('Taxi Driver', 'SBS', '2021', 'THRILLER', 'South Korea'),
        ('Penthouse', 'SBS', '2021', 'DRAMA', 'South Korea');
 
-CREATE TABLE IF NOT EXISTS film_participant
+CREATE TABLE IF NOT EXISTS participant
 (
     id         BIGSERIAL PRIMARY KEY,
     first_name VARCHAR(128) NOT NULL,
@@ -33,16 +33,25 @@ CREATE TABLE IF NOT EXISTS film_participant
     role       VARCHAR(32)  NOT NULL
 );
 
-INSERT INTO film_participant (first_name, last_name, role)
+INSERT INTO participant (first_name, last_name, role)
 VALUES ('Kim', 'Do-gi', 'ACTOR'),
        ('Park', 'Joong-woo', 'PRODUCER');
+
+CREATE TABLE IF NOT EXISTS film_participant
+(
+    id             BIGSERIAL PRIMARY KEY,
+    film_id        BIGINT REFERENCES film (id) ON DELETE CASCADE NOT NULL,
+    participant_id BIGINT REFERENCES participant (id) ON DELETE CASCADE NOT NULL,
+    invited_at     TIMESTAMP NOT NULL
+);
+
 
 CREATE TABLE IF NOT EXISTS comment
 (
     id       BIGSERIAL PRIMARY KEY,
-    film_id  INT REFERENCES film (id),
-    users_id INT REFERENCES users (id),
-    text     VARCHAR(128) NOT NULL,
+    film_id  INT REFERENCES film (id) ON DELETE CASCADE  NOT NULL,
+    users_id INT REFERENCES users (id) ON DELETE CASCADE NOT NULL,
+    text     VARCHAR(128),
     rating   NUMERIC
 );
 
@@ -50,10 +59,5 @@ INSERT INTO comment (film_id, users_id, text, rating)
 VALUES (1, 1, 'Great revenge style serial.', 9),
        (2, 1, 'Interesting korean drama. Waiting for the next season.', 8);
 
-CREATE TABLE IF NOT EXISTS film_participant_film
-(
-    film_participant_id INT REFERENCES film_participant (id),
-    film_id             INT REFERENCES film (id)
-);
 
 
